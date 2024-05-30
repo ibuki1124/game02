@@ -127,7 +127,6 @@ canvas.addEventListener('click', (event) => {
     isPass(6, "green");
     if (checkCell(x, y, currentPlayer) === true){
       reverse(x, y, currentPlayer);
-      list(x, y);
       // プレイヤーを入れ替える
       currentPlayer = currentPlayer == b ? w : b;
       if (currentPlayer == b){
