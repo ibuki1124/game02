@@ -6,35 +6,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>リバーシ</title>
   </head>
-  <body onload="drawBoard();">
+  <body onload="drawBoard();" class="bg-secondary bg-gradient text-light">
     <div class="container">
       <div class="row pt-5">
-        <div class="col-sm-12 col-lg-6 mx-auto text-center">
-          <h1>リバーシ</h1>
-          <hr>
+        <div class="col-sm-12 col-lg-6 mx-auto  mt-lg-5 text-center">
+          <h1 class="border-bottom pb-3">リバーシ</h1>
 
           <div class="row border-bottom mb-4">
-            <div class="col-sm-6 col-lg-9 border-right">
+            <div class="col-sm-7 col-lg-7 border-right">
               <p>ルール説明</p>
               <ol class="text-left">
                 <li>スタートボタンでゲームを開始</li>
-                <li>初めに真ん中に4つ駒が描画される</li>
+                <li>初めに中心に4つ駒が描画される</li>
                 <li>結果が表示されたらゲーム終了</li>
                 <li>リセットボタンで盤面をリセット</li>
-                <li>再度、スタートボタンでゲーム開始</li>
+                <li>再度スタートボタンでゲーム開始</li>
               </ol>
+              <div class="d-sm-none border-bottom my-3"></div>
             </div>
-            <div class="col-sm-6 col-lg-3 m-auto">
-              <hr class="d-sm-none">
-              <p>黒石：先攻</p>
-              <p>白石：後攻</p>
+            <div class="col-sm-5 col-lg-5 m-auto">
+              <p class="py-2" id="text">ゲームが開始していません</p>
+              <div class="h1 text-body" id="current"></div>
             </div>
           </div>
         </div>
 
         <div class="row m-auto">
           <div class="col">
-            <canvas id="canvas" width="400" height="400" class="bg-success m-auto"></canvas>
+            <canvas id="canvas" width="400" height="400" class="m-auto"></canvas>
             <div class="col-sm-10 col-lg-12 m-auto text-center py-3">
               <button id="start" class="btn btn-success btn-lg mr-5">スタート</button>
               <button id="reset" class="btn btn-danger btn-lg">リセット</button>
@@ -43,8 +42,8 @@
               <p class="mx-auto">黒：<span class="text-danger font-weight-bold" id="b-count"></span></p>
               <p class="mx-auto ">白：<span class="text-danger font-weight-bold" id="w-count"></span></p>
             </div>
-            <p id="pass"></p>
-            <div class="" id="win-count"></div>
+            <h3 class="border-bottom text-center">勝敗</h3>
+            <div id="win-count"></div>
           </div>
         </div>
 
